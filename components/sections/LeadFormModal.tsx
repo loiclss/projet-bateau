@@ -79,36 +79,36 @@ export default function LeadFormModal({ boat, isOpen, onClose }: LeadFormModalPr
     setErrors({}); setSubmitError('')
   }
 
-  const inputCls = "h-10 bg-[#0a1628] border-white/[0.06] text-white placeholder:text-slate-500 focus-visible:ring-sky-500/40"
+  const inputCls = "h-10 bg-[#1B3A4B] border-[var(--color-ecume)]/15 text-[var(--color-ecume)] placeholder:text-[var(--color-granit)] focus-visible:ring-[var(--color-ocre)]/40"
 
   return (
     <Sheet open={isOpen} onOpenChange={(o) => { if (!o) { reset(); onClose() } }}>
-      <SheetContent className="w-full sm:max-w-md border-l border-white/[0.06] bg-[#111d33] text-slate-100 flex flex-col overflow-y-auto">
+      <SheetContent className="w-full sm:max-w-md border-l border-[var(--color-ecume)]/10 bg-[#142C39] text-[var(--color-ecume)] flex flex-col overflow-y-auto p-4 sm:p-6">
         <div>
-          <SheetHeader className="pb-5 border-b border-white/[0.06]">
-            <SheetTitle className="font-heading text-xl font-bold text-white">Vérifier les disponibilités</SheetTitle>
-            <SheetDescription className="text-slate-400">
-              <span className="text-sky-400 font-medium">{boat.name}</span> · {boat.port}
+          <SheetHeader className="pb-5 border-b border-[var(--color-ecume)]/10">
+            <SheetTitle className="font-heading text-xl font-bold text-[var(--color-ecume)]">Vérifier les disponibilités</SheetTitle>
+            <SheetDescription className="text-[#D0D4D2]">
+              <span className="text-[var(--color-ocre)] font-medium">{boat.name}</span> · Port de {boat.port}
             </SheetDescription>
           </SheetHeader>
 
           {success ? (
             <div className="flex flex-col items-center justify-center py-16 text-center space-y-3">
               <CheckCircle2 className="h-14 w-14 text-emerald-400" />
-              <h3 className="font-heading text-xl font-bold text-white">Demande envoyée</h3>
-              <p className="text-sm text-slate-400 max-w-xs">Le loueur à {boat.port} vous recontactera sous 24 h.</p>
+              <h3 className="font-heading text-xl font-bold text-white">Demande envoyée avec succès !</h3>
+              <p className="text-sm text-[#D0D4D2] max-w-xs">Le loueur agréé à {boat.port} vous transmettra votre devis personnalisé sous 24 h.</p>
             </div>
           ) : (
             <div className="py-6">
               {/* Steps */}
               <div className="flex items-center justify-center gap-3 mb-8">
-                <div className={`flex items-center gap-1.5 text-xs font-semibold ${step === 1 ? 'text-sky-400' : 'text-emerald-400'}`}>
-                  <span className={`flex h-5 w-5 items-center justify-center rounded-full text-[0.65rem] font-bold ${step === 1 ? 'bg-sky-500 text-white' : 'bg-emerald-500 text-white'}`}>1</span>
+                <div className={`flex items-center gap-1.5 text-xs font-semibold ${step === 1 ? 'text-[var(--color-ocre)]' : 'text-emerald-400'}`}>
+                  <span className={`flex h-5 w-5 items-center justify-center rounded-full text-[0.65rem] font-bold ${step === 1 ? 'bg-[var(--color-cuivre)] text-white' : 'bg-emerald-500 text-white'}`}>1</span>
                   Séjour
                 </div>
                 <div className="h-px w-6 bg-white/10" />
-                <div className={`flex items-center gap-1.5 text-xs font-semibold ${step === 2 ? 'text-sky-400' : 'text-slate-500'}`}>
-                  <span className={`flex h-5 w-5 items-center justify-center rounded-full text-[0.65rem] font-bold ${step === 2 ? 'bg-sky-500 text-white' : 'bg-[#0a1628] text-slate-500 ring-1 ring-white/10'}`}>2</span>
+                <div className={`flex items-center gap-1.5 text-xs font-semibold ${step === 2 ? 'text-[var(--color-ocre)]' : 'text-[var(--color-granit)]'}`}>
+                  <span className={`flex h-5 w-5 items-center justify-center rounded-full text-[0.65rem] font-bold ${step === 2 ? 'bg-[var(--color-cuivre)] text-white' : 'bg-[#1B3A4B] text-[var(--color-granit)] ring-1 ring-white/10'}`}>2</span>
                   Contact
                 </div>
               </div>
@@ -119,60 +119,60 @@ export default function LeadFormModal({ boat, isOpen, onClose }: LeadFormModalPr
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <AnimatePresence mode="wait">
                   {step === 1 ? (
                     <motion.div key="s1" initial={{ opacity: 0, x: -8 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 8 }} className="space-y-4">
                       <div className="space-y-1.5">
-                        <Label className="text-slate-300 text-xs flex items-center gap-1.5"><Calendar className="h-3.5 w-3.5 text-sky-400" />Début</Label>
+                        <Label className="text-slate-300 text-xs flex items-center gap-1.5"><Calendar className="h-3.5 w-3.5 text-[var(--color-ocre)]" />Date de début</Label>
                         <Input type="date" min={today} value={startDate} onChange={e => setStartDate(e.target.value)} className={inputCls} />
                         {errors.startDate && <p className="text-xs text-red-400">{errors.startDate}</p>}
                       </div>
                       <div className="space-y-1.5">
-                        <Label className="text-slate-300 text-xs flex items-center gap-1.5"><Calendar className="h-3.5 w-3.5 text-sky-400" />Fin</Label>
+                        <Label className="text-slate-300 text-xs flex items-center gap-1.5"><Calendar className="h-3.5 w-3.5 text-[var(--color-ocre)]" />Date de fin</Label>
                         <Input type="date" min={startDate || today} value={endDate} onChange={e => setEndDate(e.target.value)} className={inputCls} />
                         {errors.endDate && <p className="text-xs text-red-400">{errors.endDate}</p>}
                       </div>
                       <div className="space-y-1.5">
-                        <Label className="text-slate-300 text-xs flex items-center gap-1.5"><Users className="h-3.5 w-3.5 text-sky-400" />Passagers (max {boat.capacity})</Label>
+                        <Label className="text-slate-300 text-xs flex items-center gap-1.5"><Users className="h-3.5 w-3.5 text-[var(--color-ocre)]" />Passagers (max {boat.capacity})</Label>
                         <Input type="number" min="1" max={boat.capacity} value={guests} onChange={e => setGuests(e.target.value)} className={inputCls} />
                         {errors.guests && <p className="text-xs text-red-400">{errors.guests}</p>}
                       </div>
                       <button type="button" onClick={() => { if (validateStep1()) setStep(2) }}
-                        className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition-all hover:bg-sky-400">
+                        className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-[var(--color-cuivre)] py-3 text-sm font-semibold text-white shadow-lg shadow-[var(--color-cuivre)]/20 transition-all hover:brightness-110">
                         Continuer <ArrowRight className="h-4 w-4" />
                       </button>
                     </motion.div>
                   ) : (
                     <motion.div key="s2" initial={{ opacity: 0, x: 8 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -8 }} className="space-y-4">
                       <div className="space-y-1.5">
-                        <Label className="text-slate-300 text-xs flex items-center gap-1.5"><User className="h-3.5 w-3.5 text-sky-400" />Nom complet</Label>
+                        <Label className="text-slate-300 text-xs flex items-center gap-1.5"><User className="h-3.5 w-3.5 text-[var(--color-ocre)]" />Nom complet</Label>
                         <Input placeholder="Jean Dupont" value={clientName} onChange={e => setClientName(e.target.value)} className={inputCls} />
                         {errors.clientName && <p className="text-xs text-red-400">{errors.clientName}</p>}
                       </div>
                       <div className="space-y-1.5">
-                        <Label className="text-slate-300 text-xs flex items-center gap-1.5"><Mail className="h-3.5 w-3.5 text-sky-400" />Email</Label>
+                        <Label className="text-slate-300 text-xs flex items-center gap-1.5"><Mail className="h-3.5 w-3.5 text-[var(--color-ocre)]" />Email</Label>
                         <Input type="email" placeholder="jean@exemple.fr" value={clientEmail} onChange={e => setClientEmail(e.target.value)} className={inputCls} />
                         {errors.clientEmail && <p className="text-xs text-red-400">{errors.clientEmail}</p>}
                       </div>
                       <div className="space-y-1.5">
-                        <Label className="text-slate-300 text-xs flex items-center gap-1.5"><Phone className="h-3.5 w-3.5 text-sky-400" />Téléphone</Label>
+                        <Label className="text-slate-300 text-xs flex items-center gap-1.5"><Phone className="h-3.5 w-3.5 text-[var(--color-ocre)]" />Téléphone</Label>
                         <Input type="tel" placeholder="06 12 34 56 78" value={clientPhone} onChange={e => setClientPhone(e.target.value)} className={inputCls} />
                         {errors.clientPhone && <p className="text-xs text-red-400">{errors.clientPhone}</p>}
                       </div>
                       <div className="space-y-1.5">
-                        <Label className="text-slate-300 text-xs flex items-center gap-1.5"><MessageSquare className="h-3.5 w-3.5 text-sky-400" />Message (optionnel)</Label>
-                        <textarea rows={3} placeholder="Besoin d'un skipper, pêche…" value={message} onChange={e => setMessage(e.target.value)}
-                          className="w-full rounded-md bg-[#0a1628] border border-white/[0.06] p-3 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500/40" />
+                        <Label className="text-slate-300 text-xs flex items-center gap-1.5"><MessageSquare className="h-3.5 w-3.5 text-[var(--color-ocre)]" />Message (optionnel)</Label>
+                        <textarea rows={3} placeholder="Besoin d'un skipper, conseils de navigation…" value={message} onChange={e => setMessage(e.target.value)}
+                          className="w-full rounded-md bg-[#1B3A4B] border border-[var(--color-ecume)]/15 p-3 text-sm text-[var(--color-ecume)] placeholder:text-[var(--color-granit)] focus:outline-none focus:ring-2 focus:ring-[var(--color-ocre)]/40" />
                       </div>
                       <div className="grid grid-cols-2 gap-3 pt-1">
                         <button type="button" onClick={() => setStep(1)}
-                          className="flex items-center justify-center gap-1.5 rounded-xl border border-white/[0.08] py-2.5 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5">
+                          className="flex items-center justify-center gap-1.5 rounded-xl border border-[var(--color-ecume)]/15 py-2.5 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5">
                           <ArrowLeft className="h-4 w-4" /> Retour
                         </button>
                         <button type="submit" disabled={loading}
-                          className="rounded-xl bg-sky-500 py-2.5 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition-all hover:bg-sky-400 disabled:opacity-50">
-                          {loading ? 'Envoi…' : 'Envoyer'}
+                          className="rounded-xl bg-[var(--color-cuivre)] py-2.5 text-sm font-semibold text-white shadow-lg shadow-[var(--color-cuivre)]/20 transition-all hover:brightness-110 disabled:opacity-50">
+                          {loading ? 'Envoi…' : 'Envoyer la demande'}
                         </button>
                       </div>
                     </motion.div>

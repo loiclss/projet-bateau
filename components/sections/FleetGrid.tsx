@@ -28,22 +28,19 @@ export default function FleetGrid({ boats, filters, onSearch }: FleetGridProps) 
   return (
     <section
       id="fleet"
-      className="relative scroll-mt-20 border-t border-white/[0.04] bg-[#0a1628] py-24"
+      className="relative scroll-mt-20 border-t border-[var(--color-ecume)]/10 bg-[var(--color-vasiere)] py-24"
     >
-      {/* Subtle glow separator */}
-      <div className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-px w-2/3 bg-gradient-to-r from-transparent via-sky-500/30 to-transparent" />
-
       <div className="mx-auto max-w-6xl px-5">
         {/* Section header */}
         <div className="mb-10 max-w-xl">
-          <p className="mb-3 text-[0.75rem] font-semibold uppercase tracking-[0.2em] text-sky-400">
+          <p className="mb-3 text-[0.75rem] font-semibold uppercase tracking-[0.2em] text-[var(--color-ocre)]">
             Notre sélection
           </p>
-          <h2 className="font-heading text-3xl font-bold leading-tight text-white md:text-4xl">
+          <h2 className="font-heading text-3xl font-bold leading-tight text-[var(--color-ecume)] md:text-4xl">
             Des bateaux d'exception pour naviguer dans le Golfe
           </h2>
-          <p className="mt-4 text-[0.95rem] leading-relaxed text-slate-400">
-            Chaque embarcation est entretenue par des professionnels agréés du
+          <p className="mt-4 text-[0.95rem] leading-relaxed text-[#D0D4D2]">
+            Chaque embarcation est entretenue par des loueurs professionnels agréés du
             littoral morbihannais et livrée prête à naviguer.
           </p>
         </div>
@@ -69,12 +66,12 @@ export default function FleetGrid({ boats, filters, onSearch }: FleetGridProps) 
             ))}
           </div>
         ) : (
-          <div className="mx-auto flex max-w-sm flex-col items-center rounded-2xl border border-white/[0.06] bg-[#111d33] py-16 text-center">
-            <Ship className="mb-4 h-10 w-10 text-sky-400/40" />
-            <h3 className="font-heading text-lg font-semibold text-white">
+          <div className="mx-auto flex max-w-sm flex-col items-center rounded-2xl border border-[var(--color-ecume)]/10 bg-[#142C39] py-16 text-center">
+            <Ship className="mb-4 h-10 w-10 text-[var(--color-ocre)]/40" />
+            <h3 className="font-heading text-lg font-semibold text-[var(--color-ecume)]">
               Aucun résultat
             </h3>
-            <p className="mt-1 text-sm text-slate-400">
+            <p className="mt-1 text-sm text-[#D0D4D2]">
               Essayez d'élargir vos critères de recherche.
             </p>
           </div>
