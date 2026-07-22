@@ -1,50 +1,79 @@
-import { Sunset, Fish, Sailboat } from 'lucide-react'
+import { Sailboat, Fish, Sunset } from 'lucide-react'
 
 export default function Activities() {
   const activities = [
     {
-      icon: <Sailboat className="h-8 w-8 text-[var(--color-cuivre)]" />,
-      title: "Navigation & Glisse",
-      description: "Louez un semi-rigide sportif pour une session de wakeboard ou de bouée tractée entre amis. Le Golfe offre des zones dégagées parfaites pour les sports nautiques."
+      title: "Navigation, Glisse & Sensations",
+      description: "Embarquez sur un semi-rigide sportif motorisé pour une journée active. Bouée tractée, ski nautique ou simplement un saut d'île en île à vive allure dans la baie de Quiberon.",
+      image: "/dest-port-navalo.jfif",
+      tag: "Sport & Vitesse",
+      icon: Sailboat
     },
     {
-      icon: <Fish className="h-8 w-8 text-[var(--color-cuivre)]" />,
-      title: "Pêche en Mer",
-      description: "Partez au petit matin sur l'un de nos bateaux à moteur adaptés à la pêche. Les courants du Golfe sont réputés pour le bar et la daurade."
+      title: "Pêche en Mer au Petit Matin",
+      description: "Partez au lever du soleil sur un bateau à moteur parfaitement équipé (sondeur, porte-cannes). Les courants vifs du Golfe regorgent de bars, daurades et lieux.",
+      image: "/dest-vannes.jfif",
+      tag: "Pêche Sportive",
+      icon: Fish
     },
     {
-      icon: <Sunset className="h-8 w-8 text-[var(--color-cuivre)]" />,
-      title: "Apéro & Coucher de Soleil",
-      description: "Louez un voilier ou un bateau confortable pour une soirée inoubliable. Mouillez l'ancre, sortez l'apéritif et admirez le soleil se coucher sur l'eau."
+      title: "Coucher de Soleil & Escale Gourmande",
+      description: "Louez un voilier ou une vedette confortable. Jetez l'ancre près de l'Île d'Arz au crépuscule, sortez l'apéritif local et profitez d'une soirée paisible au fil de l'eau.",
+      image: "/hero-bg.jpeg",
+      tag: "Détente & Évasion",
+      icon: Sunset
     }
   ]
 
   return (
-    <section className="bg-[#26302b] py-24 border-t border-[var(--color-ecume)]/5">
+    <section className="bg-[var(--color-vasiere)] py-24 border-t border-[var(--color-ecume)]/10">
       <div className="mx-auto max-w-6xl px-5">
-        <div className="text-center mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-20">
           <p className="mb-3 text-[0.75rem] font-semibold uppercase tracking-[0.2em] text-[var(--color-ocre)]">
-            Idées d'aventures
+            Inspirations Nautiques
           </p>
           <h2 className="font-heading text-3xl font-bold text-[var(--color-ecume)] md:text-4xl">
-            Que faire en bateau ?
+            Des programmes de navigation sur mesure
           </h2>
         </div>
 
-        <div className="grid gap-10 md:grid-cols-3">
-          {activities.map((activity, index) => (
-            <div key={index} className="flex flex-col items-center text-center">
-              <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-[var(--color-vasiere)] ring-1 ring-[var(--color-ecume)]/10 shadow-lg shadow-black/20">
-                {activity.icon}
+        <div className="space-y-16">
+          {activities.map((act, i) => {
+            const Icon = act.icon
+            const isEven = i % 2 === 0
+            return (
+              <div
+                key={i}
+                className={`flex flex-col gap-8 lg:flex-row lg:items-center ${
+                  isEven ? '' : 'lg:flex-row-reverse'
+                }`}
+              >
+                {/* Photo Grand Format */}
+                <div className="relative aspect-[16/9] lg:w-1/2 overflow-hidden rounded-3xl border border-[var(--color-ecume)]/15 shadow-2xl">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={act.image}
+                    alt={act.title}
+                    className="h-full w-full object-cover filter brightness-90 transition-transform duration-700 hover:scale-105"
+                  />
+                  <div className="absolute top-4 left-4 bg-[#1B3A4B]/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-[var(--color-ecume)]/15 text-xs font-semibold text-[var(--color-ocre)] uppercase tracking-wider flex items-center gap-2">
+                    <Icon className="h-3.5 w-3.5" />
+                    {act.tag}
+                  </div>
+                </div>
+
+                {/* Texte Descriptif */}
+                <div className="lg:w-1/2 space-y-4 lg:px-6">
+                  <h3 className="font-heading text-2xl font-bold text-[var(--color-ecume)] md:text-3xl">
+                    {act.title}
+                  </h3>
+                  <p className="text-base text-[#D0D4D2] leading-relaxed">
+                    {act.description}
+                  </p>
+                </div>
               </div>
-              <h3 className="mb-3 font-heading text-xl font-semibold text-[var(--color-ecume)]">
-                {activity.title}
-              </h3>
-              <p className="text-[0.95rem] leading-relaxed text-[#D0D4D2] max-w-sm">
-                {activity.description}
-              </p>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

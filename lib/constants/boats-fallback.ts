@@ -25,7 +25,7 @@ export const FALLBACK_BOATS: Boat[] = [
     capacity: 12,
     base_price: 280.00,
     port: 'Vannes',
-    image_url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80',
+    image_url: '/dest-port-navalo.jfif',
     features: {
       length: '7.8m',
       cabins: 0,
@@ -59,7 +59,7 @@ export const FALLBACK_BOATS: Boat[] = [
     capacity: 8,
     base_price: 320.00,
     port: 'Le Crouesty',
-    image_url: 'https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=800&q=80',
+    image_url: '/dest-trinite.jfif',
     features: {
       length: '8.5m',
       cabins: 1,
@@ -76,7 +76,7 @@ export const FALLBACK_BOATS: Boat[] = [
     capacity: 7,
     base_price: 260.00,
     port: 'Port-Blanc',
-    image_url: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80',
+    image_url: '/dest-vannes.jfif',
     features: {
       length: '7.4m',
       cabins: 1,
@@ -110,7 +110,7 @@ export const FALLBACK_BOATS: Boat[] = [
     capacity: 10,
     base_price: 220.00,
     port: 'Arradon',
-    image_url: 'https://images.unsplash.com/photo-1614093661276-8cc074e5021e?auto=format&fit=crop&w=800&q=80',
+    image_url: '/hero-bg.jpeg',
     features: {
       length: '6.8m',
       cabins: 0,
@@ -127,7 +127,7 @@ export const FALLBACK_BOATS: Boat[] = [
     capacity: 6,
     base_price: 190.00,
     port: 'Locmariaquer',
-    image_url: 'https://images.unsplash.com/photo-1605281317010-fe5fed93f402?auto=format&fit=crop&w=800&q=80',
+    image_url: '/dest-trinite.jfif',
     features: {
       length: '6.2m',
       cabins: 0,
@@ -144,7 +144,7 @@ export const FALLBACK_BOATS: Boat[] = [
     capacity: 8,
     base_price: 180.00,
     port: 'Port-Navalo',
-    image_url: 'https://images.unsplash.com/photo-1520262454473-a1a82276a574?auto=format&fit=crop&w=800&q=80',
+    image_url: '/dest-port-navalo.jfif',
     features: {
       length: '5.8m',
       cabins: 0,
@@ -161,7 +161,7 @@ export const FALLBACK_BOATS: Boat[] = [
     capacity: 12,
     base_price: 680.00,
     port: 'Vannes',
-    image_url: 'https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&w=800&q=80',
+    image_url: 'https://images.unsplash.com/photo-1500964757637-c85e8a162699?auto=format&fit=crop&w=800&q=80',
     features: {
       length: '13.9m',
       cabins: 4,

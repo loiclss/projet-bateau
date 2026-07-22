@@ -1,56 +1,76 @@
-import { Compass, Map, Ship } from 'lucide-react'
+import { Compass, ShieldAlert, Anchor } from 'lucide-react'
 
 export default function Features() {
-  const features = [
-    {
-      icon: <Compass className="h-7 w-7 text-[var(--color-ocre)]" />,
-      title: 'Anticiper les Courants',
-      description:
-        'Le courant de la Jument peut atteindre 9 nœuds. Nos loueurs vous briefent sur les horaires de marées et les zones à courant fort pour passer en toute sécurité.',
-    },
-    {
-      icon: <Map className="h-7 w-7 text-[var(--color-ocre)]" />,
-      title: 'Naviguer entre les 42 îles',
-      description:
-        'D\'Arz à l\'Île-aux-Moines, en passant par Ilur, le Golfe est un labyrinthe. Profitez de conseils d\'experts pour trouver les mouillages les mieux abrités du vent.',
-    },
-    {
-      icon: <Ship className="h-7 w-7 text-[var(--color-ocre)]" />,
-      title: 'Des professionnels du cru',
-      description:
-        'Nos partenaires connaissent chaque haut-fond, chaque vasière et chaque parc à huîtres. Des bateaux entretenus avec rigueur et des briefings de départ intraitables sur la sécurité.',
-    },
-  ]
-
   return (
-    <section className="bg-[var(--color-vasiere)] py-24 border-t border-[var(--color-ecume)]/5">
-      <div className="mx-auto max-w-6xl px-5">
-        <div className="text-center mb-16">
-          <h2 className="font-heading text-3xl font-bold text-[var(--color-ecume)] md:text-4xl">
-            L'expertise du <span className="text-[var(--color-ocre)]">terrain</span>
-          </h2>
-          <p className="mt-4 text-[#D0D4D2] max-w-2xl mx-auto">
-            Le Morbihan ne se navigue pas comme la haute mer. La connaissance du marnage et des courants fait toute la différence.
-          </p>
-        </div>
+    <section className="relative bg-[var(--color-vasiere)] py-28 overflow-hidden border-t border-[var(--color-ecume)]/10">
+      {/* Background Image Immersif avec Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/hero-bg.jpeg"
+          alt="Naviguer dans les courants du Golfe du Morbihan"
+          className="h-full w-full object-cover opacity-25 filter brightness-75"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1B3A4B] via-[#1B3A4B]/95 to-[#1B3A4B]/80" />
+      </div>
 
-        <div className="grid gap-10 md:grid-cols-3">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="group rounded-2xl bg-[#2a342f] p-8 border border-[var(--color-ecume)]/10 transition-all hover:border-[var(--color-cuivre)]/50 hover:bg-[#323d37]"
-            >
-              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-ocre)]/10 ring-1 ring-[var(--color-ocre)]/20 group-hover:scale-110 transition-transform">
-                {feature.icon}
-              </div>
-              <h3 className="mb-4 font-heading text-xl font-semibold text-[var(--color-ecume)]">
-                {feature.title}
-              </h3>
-              <p className="text-[0.95rem] leading-relaxed text-[#D0D4D2]">
-                {feature.description}
-              </p>
+      <div className="relative z-10 mx-auto max-w-6xl px-5">
+        <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
+          {/* Main Hero Callout */}
+          <div className="lg:col-span-7 space-y-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[var(--color-cuivre)]/15 border border-[var(--color-cuivre)]/30 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[var(--color-ocre)]">
+              <ShieldAlert className="h-4 w-4" /> Spécificité Nautique Locale
             </div>
-          ))}
+
+            <h2 className="font-heading text-3xl font-extrabold text-[var(--color-ecume)] md:text-5xl leading-tight">
+              Le courant de la Jument peut atteindre <span className="text-[var(--color-ocre)]">9 nœuds</span>.
+            </h2>
+
+            <p className="text-base text-[#D0D4D2] leading-relaxed md:text-lg">
+              Le Morbihan ne se navigue pas comme la haute mer. Entre la chaussée des 42 îles, les marées et les passages resserrés, l'accompagnement de loueurs professionnels locaux fait toute la différence pour une sortie sans stress.
+            </p>
+
+            <div className="pt-4 grid sm:grid-cols-2 gap-6 text-sm text-[var(--color-ecume)] border-t border-[var(--color-ecume)]/10">
+              <div className="flex items-start gap-3">
+                <Compass className="h-5 w-5 text-[var(--color-ocre)] shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="font-semibold text-white mb-1">Briefing Marnage & Météo</h4>
+                  <p className="text-xs text-[var(--color-granit)] leading-relaxed">Calcul des heures de passage clés avant chaque départ du port.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <Anchor className="h-5 w-5 text-[var(--color-ocre)] shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="font-semibold text-white mb-1">Mouillages Privilégiés</h4>
+                  <p className="text-xs text-[var(--color-granit)] leading-relaxed">Conseils secrets sur les criques abritées du vent dominant.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Side Highlight Card */}
+          <div className="lg:col-span-5 bg-[#142C39]/90 border border-[var(--color-ecume)]/15 rounded-3xl p-8 backdrop-blur-xl shadow-2xl space-y-6">
+            <h3 className="font-heading text-xl font-bold text-white flex items-center gap-3">
+              <span className="h-3 w-3 rounded-full bg-[var(--color-ocre)] animate-pulse" />
+              Loueurs 100% Répertoriés & Agréés
+            </h3>
+            
+            <p className="text-sm leading-relaxed text-[#D0D4D2]">
+              Tous les bateaux proposés sur notre plateforme appartiennent à des armateurs établis sur les ports du Morbihan. Les navires sont inspectés et révisés avant chaque saison.
+            </p>
+
+            <ul className="space-y-3 text-xs text-[var(--color-ecume)]">
+              <li className="flex items-center gap-2.5">
+                <span className="text-[var(--color-ocre)] font-bold">✓</span> Entretien moteur et gréement contrôlé
+              </li>
+              <li className="flex items-center gap-2.5">
+                <span className="text-[var(--color-ocre)] font-bold">✓</span> Équipements de sécurité hauturiers à jour
+              </li>
+              <li className="flex items-center gap-2.5">
+                <span className="text-[var(--color-ocre)] font-bold">✓</span> Assistance et conseils 7j/7 en saison
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
