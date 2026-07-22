@@ -56,14 +56,19 @@ export default function FloatingActions() {
         </span>
       </a>
 
-      {/* Scroll To Top Button */}
+      {/* Scroll To Top Button - Identical Size (h-13 w-13) */}
       {showScroll && (
         <button
           onClick={scrollToTop}
           aria-label="Remonter en haut"
-          className="flex items-center justify-center h-10 w-10 rounded-full bg-[#142C39]/90 border border-[var(--color-ecume)]/20 text-[var(--color-ecume)] shadow-xl backdrop-blur-md transition-all duration-300 hover:bg-[var(--color-cuivre)] hover:border-[var(--color-cuivre)] hover:text-white hover:scale-110 active:scale-95"
+          className="group relative flex items-center justify-center h-13 w-13 rounded-full bg-[#142C39]/95 text-[var(--color-ecume)] shadow-2xl border border-[var(--color-ecume)]/20 backdrop-blur-xl transition-all duration-300 hover:bg-[var(--color-cuivre)] hover:border-[var(--color-cuivre)] hover:text-white hover:scale-110 active:scale-95"
         >
-          <ArrowUp className="h-4 w-4" />
+          <ArrowUp className="h-6 w-6 stroke-[2.5]" />
+
+          {/* Tooltip Label Scroll To Top */}
+          <span className="absolute right-16 top-1/2 -translate-y-1/2 whitespace-nowrap rounded-xl bg-[#1B3A4B]/95 px-3 py-1.5 text-xs font-bold text-white shadow-xl border border-[var(--color-ecume)]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            Haut de page
+          </span>
         </button>
       )}
     </div>
