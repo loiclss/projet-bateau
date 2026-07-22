@@ -59,6 +59,12 @@ export default function Navbar() {
           >
             Programmes & Circuit
           </Link>
+          <Link
+            href="/blog"
+            className="text-[0.82rem] font-medium text-slate-300 transition-colors hover:text-white"
+          >
+            Blog
+          </Link>
           <button
             onClick={() => scrollTo('reserve')}
             className="rounded-full bg-[var(--color-cuivre)] px-5 py-2 text-[0.82rem] font-semibold text-white shadow-lg shadow-[var(--color-cuivre)]/20 transition-all hover:brightness-110"
@@ -129,6 +135,13 @@ export default function Navbar() {
               className="rounded-lg px-3 py-2.5 text-left text-[0.95rem] font-medium text-slate-200 transition-colors hover:bg-white/5"
             >
               Programmes de navigation
+            </Link>
+            <Link
+              href="/blog"
+              onClick={() => setOpen(false)}
+              className="rounded-lg px-3 py-2.5 text-left text-[0.95rem] font-medium text-slate-200 transition-colors hover:bg-white/5"
+            >
+              Blog & Guides Nautiques
             </Link>
             <button
               onClick={() => scrollTo('reserve')}

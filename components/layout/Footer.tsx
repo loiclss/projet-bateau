@@ -26,19 +26,42 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Ports */}
+          {/* Blog & Guides Nautiques (SEO) */}
           <div>
             <h4 className="mb-4 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-[var(--color-ecume)]">
-              Ports de départ
+              Blog & Guides Nautiques
             </h4>
-            <ul className="space-y-2 text-sm">
-              {ports.map((p) => (
-                <li key={p}>
-                  <Link href="#fleet" className="transition-colors hover:text-[var(--color-cuivre)]">
-                    Location bateau {p}
-                  </Link>
-                </li>
-              ))}
+            <ul className="space-y-2 text-xs leading-relaxed">
+              <li>
+                <Link href="/blog/louer-bateau-sans-permis-golfe-morbihan" className="transition-colors hover:text-[var(--color-cuivre)]">
+                  Location bateau sans permis
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/passer-courant-de-la-jument" className="transition-colors hover:text-[var(--color-cuivre)]">
+                  Passer le courant de la Jument
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/les-plus-belles-escales-iles-golfe-morbihan" className="transition-colors hover:text-[var(--color-cuivre)]">
+                  Les 5 plus belles îles du Golfe
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/peche-en-mer-golfe-du-morbihan-spots-conseils" className="transition-colors hover:text-[var(--color-cuivre)]">
+                  Guide Pêche au bar & Spots
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/reglementation-mouillage-reserve-naturelle-morbihan" className="transition-colors hover:text-[var(--color-cuivre)]">
+                  Mouillages & Réglementation
+                </Link>
+              </li>
+              <li className="pt-1">
+                <Link href="/blog" className="font-semibold text-[var(--color-ocre)] hover:underline">
+                  Tous nos articles & guides →
+                </Link>
+              </li>
             </ul>
           </div>
 
