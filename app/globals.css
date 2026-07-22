@@ -9,6 +9,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
   --font-heading: var(--font-outfit);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
   /* Couleurs métier - Golfe du Morbihan */
   --color-vasiere: #3a4a42; /* Fond sombre profond (Gris-vert) */
   --color-granit: #595A55; /* Textes secondaires et bordures */
