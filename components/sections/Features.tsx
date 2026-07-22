@@ -1,58 +1,52 @@
-import { ShieldCheck, Anchor, Map, Clock } from 'lucide-react'
+import { Compass, Map, Ship } from 'lucide-react'
 
 export default function Features() {
   const features = [
     {
-      icon: <ShieldCheck className="h-6 w-6 text-sky-400" />,
-      title: 'Loueurs 100% Professionnels',
+      icon: <Compass className="h-7 w-7 text-[var(--color-ocre)]" />,
+      title: 'Anticiper les Courants',
       description:
-        'Nous travaillons exclusivement avec des professionnels agréés. Sécurité maximale et entretien rigoureux garantis.',
+        'Le courant de la Jument peut atteindre 9 nœuds. Nos loueurs vous briefent sur les horaires de marées et les zones à courant fort pour passer en toute sécurité.',
     },
     {
-      icon: <Anchor className="h-6 w-6 text-sky-400" />,
-      title: 'Flotte Récente & Équipée',
+      icon: <Map className="h-7 w-7 text-[var(--color-ocre)]" />,
+      title: 'Naviguer entre les 42 îles',
       description:
-        'Des bateaux de dernière génération, parfaitement équipés pour votre confort et votre sécurité en mer.',
+        'D\'Arz à l\'Île-aux-Moines, en passant par Ilur, le Golfe est un labyrinthe. Profitez de conseils d\'experts pour trouver les mouillages les mieux abrités du vent.',
     },
     {
-      icon: <Map className="h-6 w-6 text-sky-400" />,
-      title: 'Expertise Locale',
+      icon: <Ship className="h-7 w-7 text-[var(--color-ocre)]" />,
+      title: 'Des professionnels du cru',
       description:
-        'Nos partenaires vous conseillent sur les meilleurs mouillages et itinéraires secrets du Golfe.',
-    },
-    {
-      icon: <Clock className="h-6 w-6 text-sky-400" />,
-      title: 'Devis Rapide & Flexible',
-      description:
-        'Recevez une proposition sous 24h. Conditions d\'annulation souples selon la météo.',
+        'Nos partenaires connaissent chaque haut-fond, chaque vasière et chaque parc à huîtres. Des bateaux entretenus avec rigueur et des briefings de départ intraitables sur la sécurité.',
     },
   ]
 
   return (
-    <section className="bg-[#0a1628] py-24 border-t border-white/[0.04]">
+    <section className="bg-[var(--color-vasiere)] py-24 border-t border-[var(--color-ecume)]/5">
       <div className="mx-auto max-w-6xl px-5">
         <div className="text-center mb-16">
-          <h2 className="font-heading text-3xl font-bold text-white md:text-4xl">
-            Pourquoi choisir <span className="text-sky-400">Morbihan Nautic</span> ?
+          <h2 className="font-heading text-3xl font-bold text-[var(--color-ecume)] md:text-4xl">
+            L'expertise du <span className="text-[var(--color-ocre)]">terrain</span>
           </h2>
-          <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
-            L'assurance d'une navigation sereine avec les meilleurs experts locaux.
+          <p className="mt-4 text-[#D0D4D2] max-w-2xl mx-auto">
+            Le Morbihan ne se navigue pas comme la haute mer. La connaissance du marnage et des courants fait toute la différence.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 md:grid-cols-3">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="rounded-2xl bg-[#111d33] p-8 border border-white/[0.06] transition-all hover:border-sky-500/30 hover:shadow-2xl hover:shadow-sky-500/10"
+              className="group rounded-2xl bg-[#2a342f] p-8 border border-[var(--color-ecume)]/10 transition-all hover:border-[var(--color-cuivre)]/50 hover:bg-[#323d37]"
             >
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-sky-500/10 ring-1 ring-sky-500/20">
+              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-ocre)]/10 ring-1 ring-[var(--color-ocre)]/20 group-hover:scale-110 transition-transform">
                 {feature.icon}
               </div>
-              <h3 className="mb-3 font-heading text-lg font-semibold text-white">
+              <h3 className="mb-4 font-heading text-xl font-semibold text-[var(--color-ecume)]">
                 {feature.title}
               </h3>
-              <p className="text-sm leading-relaxed text-slate-400">
+              <p className="text-[0.95rem] leading-relaxed text-[#D0D4D2]">
                 {feature.description}
               </p>
             </div>

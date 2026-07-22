@@ -23,7 +23,7 @@ export default function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-[#0a1628]/90 backdrop-blur-lg border-b border-white/[0.06] py-3'
+          ? 'bg-[var(--color-vasiere)]/90 backdrop-blur-lg border-b border-white/[0.06] py-3'
           : 'bg-transparent py-5'
       }`}
     >
@@ -31,11 +31,11 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="group flex items-center gap-2.5">
           <Anchor
-            className="h-6 w-6 text-sky-400 transition-transform duration-300 group-hover:-rotate-12"
+            className="h-6 w-6 text-[var(--color-ocre)] transition-transform duration-300 group-hover:-rotate-12"
             strokeWidth={2.5}
           />
-          <span className="font-heading text-[1.1rem] font-semibold tracking-wide text-white">
-            morbihan<span className="font-light text-sky-400">nautic</span>
+          <span className="font-heading text-[1.1rem] font-semibold tracking-wide text-[var(--color-ecume)]">
+            morbihan<span className="font-light text-[var(--color-ocre)]">nautic</span>
           </span>
         </Link>
 
@@ -55,7 +55,7 @@ export default function Navbar() {
           </button>
           <button
             onClick={() => scrollTo('reserve')}
-            className="rounded-full bg-sky-500 px-5 py-2 text-[0.82rem] font-semibold text-white shadow-lg shadow-sky-500/20 transition-all hover:bg-sky-400 hover:shadow-sky-400/30"
+            className="rounded-full bg-[var(--color-cuivre)] px-5 py-2 text-[0.82rem] font-semibold text-white shadow-lg shadow-[var(--color-cuivre)]/20 transition-all hover:brightness-110"
           >
             Réserver
           </button>
@@ -63,11 +63,11 @@ export default function Navbar() {
 
         {/* Numéro de téléphone — desktop */}
         <a
-          href="tel:+33297000000"
+          href="tel:+33695275422"
           className="hidden items-center gap-2 text-[0.82rem] font-medium text-slate-300 transition-colors hover:text-white md:flex"
         >
-          <Phone className="h-4 w-4 text-sky-400" />
-          <span>02 97 00 00 00</span>
+          <Phone className="h-4 w-4 text-[var(--color-ocre)]" />
+          <span>06 95 27 54 22</span>
         </a>
 
         {/* Mobile toggle */}
@@ -82,7 +82,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-white/[0.06] bg-[#0a1628]/95 backdrop-blur-xl px-5 pb-6 pt-4 md:hidden">
+        <div className="border-t border-white/[0.06] bg-[var(--color-vasiere)]/95 backdrop-blur-xl px-5 pb-6 pt-4 md:hidden">
           <nav className="flex flex-col gap-3">
             <Link
               href="/"
@@ -98,15 +98,15 @@ export default function Navbar() {
               Nos bateaux
             </button>
             <a
-              href="tel:+33297000000"
-              className="flex items-center gap-2 rounded-lg px-3 py-2.5 text-[0.95rem] font-medium text-slate-300 transition-colors hover:bg-white/5"
+              href="tel:+33695275422"
+              className="flex items-center gap-2 rounded-lg px-3 py-2.5 text-[0.95rem] font-medium text-[var(--color-ecume)] transition-colors hover:bg-white/5"
             >
-              <Phone className="h-4 w-4 text-sky-400" />
-              02 97 00 00 00
+              <Phone className="h-4 w-4 text-[var(--color-ocre)]" />
+              06 95 27 54 22
             </a>
             <button
               onClick={() => scrollTo('reserve')}
-              className="mt-2 rounded-full bg-sky-500 px-5 py-3 text-center text-[0.95rem] font-semibold text-white shadow-lg shadow-sky-500/20"
+              className="mt-2 rounded-full bg-[var(--color-cuivre)] px-5 py-3 text-center text-[0.95rem] font-semibold text-[var(--color-ecume)] shadow-lg shadow-[var(--color-cuivre)]/20 hover:brightness-110 transition-all"
             >
               Réserver un bateau
             </button>

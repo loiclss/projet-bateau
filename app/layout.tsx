@@ -37,7 +37,7 @@ export default function RootLayout({
       style={{ colorScheme: "dark" }}
     >
       <body
-        className={`${inter.className} min-h-full flex flex-col bg-[#0a1628] text-slate-100`}
+        className={`${inter.className} min-h-full flex flex-col bg-[var(--color-vasiere)] text-[var(--color-ecume)]`}
       >
         <Navbar />
         <main className="flex-grow">{children}</main>
