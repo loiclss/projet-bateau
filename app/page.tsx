@@ -4,6 +4,7 @@ import HomeClient from '@/components/sections/HomeClient'
 import { Boat } from '@/components/sections/FleetGrid'
 
 export const revalidate = 0 // Permettre le rafraîchissement à chaque requête
+export const runtime = 'edge' // Requis par Cloudflare next-on-pages
 
 export default async function Home() {
   let boats: Boat[] = []

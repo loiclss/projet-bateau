@@ -6,6 +6,7 @@ import LeadsTable from '@/components/admin/LeadsTable'
 import { Lead } from '@/components/admin/LeadsTable'
 
 export const revalidate = 0
+export const runtime = 'edge'
 
 export default async function AdminPage() {
   const cookieStore = await cookies()
