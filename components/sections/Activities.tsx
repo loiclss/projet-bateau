@@ -54,7 +54,7 @@ export default function Activities() {
                   <img
                     src={act.image}
                     alt={act.title}
-                    className="h-full w-full object-cover filter brightness-90 transition-transform duration-700 hover:scale-105"
+                    className="h-full w-full object-cover filter brightness-105 contrast-[1.02] transition-transform duration-700 hover:scale-105"
                   />
                   <div className="absolute top-4 left-4 bg-[#1B3A4B]/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-[var(--color-ecume)]/15 text-xs font-semibold text-[var(--color-ocre)] uppercase tracking-wider flex items-center gap-2">
                     <Icon className="h-3.5 w-3.5" />

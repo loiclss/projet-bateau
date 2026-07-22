@@ -69,9 +69,9 @@ export default function Destinations() {
               <img
                 src={port.imageUrl}
                 alt={`Location de bateau au départ de ${port.name}`}
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-90"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-105 contrast-[1.02]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1B3A4B] via-[#1B3A4B]/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#142C39]/95 via-[#142C39]/35 to-transparent" />
 
               <div className="relative z-10 flex h-full flex-col justify-between p-6">
                 <div>

@@ -10,25 +10,21 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[85vh] lg:min-h-[88vh] flex flex-col justify-center items-center overflow-hidden bg-[var(--color-vasiere)] pt-28 pb-20">
-      {/* Image d'arrière-plan (Le fameux Tempest semi-rigide de l'utilisateur) */}
+      {/* Image d'arrière-plan principale */}
       <div className="absolute inset-0 z-0 h-full w-full">
-        {/* L'utilisateur placera sa photo hero-bateau.jpg dans le dossier public/ */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/hero-bateau.jpg"
+          src="/hero-bg.jpeg"
           alt="Location bateau semi-rigide Golfe du Morbihan"
-          className="h-full w-full object-cover opacity-80"
-          onError={(e) => {
-            // Fallback si l'image n'est pas encore uploadée
-            e.currentTarget.src = "/hero-bg.jpeg"
-          }}
+          className="h-full w-full object-cover filter brightness-105 contrast-[1.05]"
         />
       </div>
 
-      {/* Overlay gradient pour la lisibilité sur fond marine */}
+      {/* Overlay gradient translucide pour sublimer l'image tout en gardant la lisibilité */}
       <div
         className="absolute inset-0 z-[1]"
         style={{
-          background: 'linear-gradient(to bottom, rgba(27,58,75,0.55) 0%, rgba(27,58,75,0.95) 100%)',
+          background: 'linear-gradient(to bottom, rgba(15, 30, 42, 0.35) 0%, rgba(27, 58, 75, 0.65) 100%)',
         }}
       />
 

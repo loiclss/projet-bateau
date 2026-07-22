@@ -8,9 +8,9 @@ export default function Features() {
         <img
           src="/hero-bg.jpeg"
           alt="Naviguer dans les courants du Golfe du Morbihan"
-          className="h-full w-full object-cover opacity-25 filter brightness-75"
+          className="h-full w-full object-cover opacity-60 filter brightness-95"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1B3A4B] via-[#1B3A4B]/95 to-[#1B3A4B]/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1B3A4B]/90 via-[#1B3A4B]/70 to-[#1B3A4B]/40" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-5">

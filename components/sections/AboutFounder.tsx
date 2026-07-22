@@ -12,7 +12,7 @@ export default function AboutFounder() {
               <img
                 src="/hero-bg.jpeg"
                 alt="Passionné de voile dans le Golfe du Morbihan"
-                className="h-full w-full object-cover filter brightness-90"
+                className="h-full w-full object-cover filter brightness-105 contrast-[1.02]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1B3A4B] via-transparent to-transparent" />
               
