@@ -39,7 +39,7 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop nav — 3 onglets */}
+        {/* Desktop nav — 4 onglets */}
         <nav className="hidden items-center gap-8 md:flex">
           <Link
             href="/"
@@ -53,6 +53,12 @@ export default function Navbar() {
           >
             Nos bateaux
           </button>
+          <Link
+            href="/programmes"
+            className="text-[0.82rem] font-medium text-slate-300 transition-colors hover:text-white"
+          >
+            Programmes & Circuit
+          </Link>
           <button
             onClick={() => scrollTo('reserve')}
             className="rounded-full bg-[var(--color-cuivre)] px-5 py-2 text-[0.82rem] font-semibold text-white shadow-lg shadow-[var(--color-cuivre)]/20 transition-all hover:brightness-110"
@@ -117,6 +123,13 @@ export default function Navbar() {
             >
               Nos bateaux
             </button>
+            <Link
+              href="/programmes"
+              onClick={() => setOpen(false)}
+              className="rounded-lg px-3 py-2.5 text-left text-[0.95rem] font-medium text-slate-200 transition-colors hover:bg-white/5"
+            >
+              Programmes de navigation
+            </Link>
             <button
               onClick={() => scrollTo('reserve')}
               className="mt-2 rounded-full bg-[var(--color-cuivre)] px-5 py-3 text-center text-[0.95rem] font-semibold text-[var(--color-ecume)] shadow-lg shadow-[var(--color-cuivre)]/20 hover:brightness-110 transition-all"

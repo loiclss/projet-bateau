@@ -75,6 +75,15 @@ export default function Activities() {
             )
           })}
         </div>
+
+        <div className="mt-16 text-center">
+          <a
+            href="/programmes"
+            className="inline-flex items-center gap-2 rounded-full bg-[var(--color-cuivre)] px-8 py-3.5 text-sm font-semibold text-white shadow-xl shadow-[var(--color-cuivre)]/20 transition-all hover:brightness-110 hover:scale-105 active:scale-98"
+          >
+            Découvrir tous les itinéraires & conseils de navigation →
+          </a>
+        </div>
       </div>
     </section>
   )
