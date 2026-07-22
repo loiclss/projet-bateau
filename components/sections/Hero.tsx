@@ -9,7 +9,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-[90vh] sm:min-h-[100vh] flex flex-col justify-center overflow-hidden bg-[var(--color-vasiere)] pt-24 pb-16">
+    <section className="relative min-h-[85vh] lg:min-h-[88vh] flex flex-col justify-center items-center overflow-hidden bg-[var(--color-vasiere)] pt-28 pb-20">
       {/* Image d'arrière-plan (Le fameux Tempest semi-rigide de l'utilisateur) */}
       <div className="absolute inset-0 z-0 h-full w-full">
         {/* L'utilisateur placera sa photo hero-bateau.jpg dans le dossier public/ */}
@@ -28,17 +28,19 @@ export default function Hero() {
       <div
         className="absolute inset-0 z-[1]"
         style={{
-          background: 'linear-gradient(to bottom, rgba(27,58,75,0.5) 0%, rgba(27,58,75,0.95) 100%)',
+          background: 'linear-gradient(to bottom, rgba(27,58,75,0.55) 0%, rgba(27,58,75,0.95) 100%)',
         }}
       />
 
-      {/* Contenu de conviction (sans animations SaaS excessives) */}
-      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 text-center my-auto">
-        <div className="space-y-4 sm:space-y-6">
+      {/* Contenu de conviction (parfaitement équilibré sur grand écran) */}
+      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 text-center my-auto pt-6 lg:pt-10">
+        <div className="space-y-5 sm:space-y-7">
           {/* Accroche contextuelle authentique */}
-          <span className="inline-block text-[0.7rem] sm:text-[0.75rem] font-medium tracking-[0.15em] sm:tracking-[0.2em] text-[var(--color-ecume)] uppercase bg-[#1B3A4B]/80 border border-[var(--color-ecume)]/15 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full backdrop-blur-md">
-            Golfe du Morbihan · Bretagne Sud
-          </span>
+          <div>
+            <span className="inline-block text-[0.75rem] sm:text-[0.8rem] font-semibold tracking-[0.2em] text-[var(--color-ecume)] uppercase bg-[#1B3A4B]/90 border border-[var(--color-ecume)]/20 px-5 py-2.5 rounded-full backdrop-blur-md shadow-lg">
+              Golfe du Morbihan · Bretagne Sud
+            </span>
+          </div>
 
           {/* Titre principal — ancré dans le lieu */}
           <h1 className="font-heading text-3xl font-extrabold leading-[1.15] tracking-tight text-[var(--color-ecume)] sm:text-5xl md:text-6xl lg:text-7xl">
