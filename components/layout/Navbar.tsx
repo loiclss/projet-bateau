@@ -61,29 +61,49 @@ export default function Navbar() {
           </button>
         </nav>
 
-        {/* Numéro de téléphone — desktop */}
-        <a
-          href="tel:+33695275422"
-          className="hidden items-center gap-2 text-[0.82rem] font-medium text-slate-300 transition-colors hover:text-white md:flex"
-        >
-          <Phone className="h-4 w-4 text-[var(--color-ocre)]" />
-          <span>06 95 27 54 22</span>
-        </a>
+        {/* Numéro de téléphone — desktop très visible */}
+        <div className="hidden md:flex items-center gap-4">
+          <a
+            href="tel:+33695275422"
+            className="flex items-center gap-2.5 rounded-full bg-[var(--color-cuivre)]/20 border border-[var(--color-cuivre)]/40 px-4.5 py-2 text-[0.88rem] font-bold text-[var(--color-ocre)] shadow-lg transition-all hover:bg-[var(--color-cuivre)] hover:text-white hover:scale-105 active:scale-95"
+          >
+            <Phone className="h-4 w-4 animate-pulse text-[var(--color-ocre)] group-hover:text-white" />
+            <span>06 95 27 54 22</span>
+          </a>
+        </div>
 
-        {/* Mobile toggle */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="text-slate-300 md:hidden"
-          aria-label="Menu"
-        >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        {/* Mobile controls (Appel direct + Menu toggle) */}
+        <div className="flex items-center gap-3 md:hidden">
+          <a
+            href="tel:+33695275422"
+            aria-label="Appeler directement"
+            className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--color-cuivre)] text-white shadow-md shadow-[var(--color-cuivre)]/30 active:scale-95"
+          >
+            <Phone className="h-4 w-4" />
+          </a>
+          <button
+            onClick={() => setOpen(!open)}
+            className="text-[var(--color-ecume)] p-1"
+            aria-label="Menu"
+          >
+            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-white/[0.06] bg-[var(--color-vasiere)]/95 backdrop-blur-xl px-5 pb-6 pt-4 md:hidden">
+        <div className="border-t border-white/[0.08] bg-[#142C39]/95 backdrop-blur-2xl px-5 pb-6 pt-4 md:hidden">
           <nav className="flex flex-col gap-3">
+            {/* Bannière Téléphone Highlight Mobile */}
+            <a
+              href="tel:+33695275422"
+              className="flex items-center justify-center gap-2.5 rounded-xl bg-[var(--color-cuivre)]/20 border border-[var(--color-cuivre)]/40 py-3 text-center text-[0.95rem] font-bold text-[var(--color-ocre)] shadow-md"
+            >
+              <Phone className="h-4 w-4 animate-pulse" />
+              Ligne directe : 06 95 27 54 22
+            </a>
+
             <Link
               href="/"
               onClick={() => setOpen(false)}
@@ -97,13 +117,6 @@ export default function Navbar() {
             >
               Nos bateaux
             </button>
-            <a
-              href="tel:+33695275422"
-              className="flex items-center gap-2 rounded-lg px-3 py-2.5 text-[0.95rem] font-medium text-[var(--color-ecume)] transition-colors hover:bg-white/5"
-            >
-              <Phone className="h-4 w-4 text-[var(--color-ocre)]" />
-              06 95 27 54 22
-            </a>
             <button
               onClick={() => scrollTo('reserve')}
               className="mt-2 rounded-full bg-[var(--color-cuivre)] px-5 py-3 text-center text-[0.95rem] font-semibold text-[var(--color-ecume)] shadow-lg shadow-[var(--color-cuivre)]/20 hover:brightness-110 transition-all"

@@ -57,19 +57,19 @@ export default function Hero() {
           </p>
 
           {/* Double CTA */}
-          <div className="flex flex-col items-center gap-3 pt-2 sm:flex-row sm:justify-center sm:gap-4 sm:pt-4">
+          <div className="flex flex-col items-center gap-3.5 pt-3 sm:flex-row sm:justify-center sm:gap-5 sm:pt-4">
             <button
               onClick={scrollToFleet}
-              className="w-full sm:w-auto rounded-full bg-[var(--color-cuivre)] px-8 py-3.5 text-[0.9rem] sm:text-[0.95rem] font-semibold text-[var(--color-ecume)] shadow-xl shadow-[var(--color-cuivre)]/20 transition-all hover:brightness-110 active:scale-[0.98]"
+              className="w-full sm:w-auto rounded-full bg-[var(--color-cuivre)] px-8 py-3.5 text-[0.9rem] sm:text-[0.95rem] font-semibold text-[var(--color-ecume)] shadow-xl shadow-[var(--color-cuivre)]/30 transition-all hover:brightness-110 active:scale-[0.98]"
             >
               Découvrir la flotte
             </button>
             <a
               href="tel:+33695275422"
-              className="w-full sm:w-auto flex items-center justify-center gap-2.5 rounded-full border border-[var(--color-granit)] bg-[#1B3A4B]/60 backdrop-blur-sm px-7 py-3.5 text-[0.9rem] sm:text-[0.95rem] font-medium text-[var(--color-ecume)] transition-all hover:bg-[var(--color-granit)]/30 hover:border-[var(--color-ecume)]/50"
+              className="w-full sm:w-auto flex items-center justify-center gap-2.5 rounded-full border-2 border-[var(--color-cuivre)]/60 bg-[#1B3A4B]/80 backdrop-blur-md px-7 py-3.5 text-[0.9rem] sm:text-[0.95rem] font-bold text-[var(--color-ocre)] shadow-xl shadow-[var(--color-cuivre)]/10 transition-all hover:bg-[var(--color-cuivre)] hover:text-white hover:border-[var(--color-cuivre)] active:scale-[0.98]"
             >
-              <Phone className="h-4 w-4 text-[var(--color-ocre)]" />
-              06 95 27 54 22
+              <Phone className="h-4.5 w-4.5 text-[var(--color-ocre)] group-hover:text-white animate-pulse" />
+              <span>06 95 27 54 22</span>
             </a>
           </div>
 
