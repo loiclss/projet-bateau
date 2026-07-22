@@ -19,7 +19,7 @@ export default function Hero() {
           className="h-full w-full object-cover opacity-80"
           onError={(e) => {
             // Fallback si l'image n'est pas encore uploadée
-            e.currentTarget.src = "https://images.unsplash.com/photo-1544976722-e4299446d3ea?auto=format&fit=crop&w=1920&q=80"
+            e.currentTarget.src = "/hero-bg.jpeg"
           }}
         />
       </div>

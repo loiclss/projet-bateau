@@ -5,17 +5,17 @@ export default function Destinations() {
     {
       name: "Vannes",
       description: "Départ mythique depuis le fond du Golfe. Une sortie magique par le chenal qui vous plonge immédiatement dans l'ambiance.",
-      imageUrl: "https://images.unsplash.com/photo-1621213327668-cb03f29bb572?auto=format&fit=crop&w=800&q=80",
+      imageUrl: "/dest-vannes.jfif",
     },
     {
       name: "Arradon & Port-Blanc",
       description: "Des points de départ stratégiques au centre du Golfe. Idéal pour atteindre rapidement l'Île-aux-Moines et l'Île d'Arz.",
-      imageUrl: "https://images.unsplash.com/photo-1549419131-7e3e4a2e5d9f?auto=format&fit=crop&w=800&q=80",
+      imageUrl: "/dest-port-navalo.jfif",
     },
     {
       name: "Le Crouesty",
       description: "Le plus grand port de plaisance de Bretagne. Un accès direct à la baie de Quiberon et aux îles de Houat et Hoëdic pour le hauturier.",
-      imageUrl: "https://images.unsplash.com/photo-1517400508447-f8dd518b86db?auto=format&fit=crop&w=800&q=80",
+      imageUrl: "/dest-trinite.jfif",
     }
   ]
 
