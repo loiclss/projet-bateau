@@ -17,9 +17,10 @@ export default function AdminLoginPage() {
     e.preventDefault()
     setLoading(true); setError('')
     const result = await loginAction(password)
-    setLoading(false)
-    if (result.success) { router.push('/admin'); router.refresh() }
-    else setError(result.message || 'Erreur.')
+    if (result && !result.success) {
+      setLoading(false)
+      setError(result.message || 'Erreur.')
+    }
   }
 
   return (

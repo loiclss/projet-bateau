@@ -1,21 +1,21 @@
 'use server'
 
 import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
 
 export async function loginAction(password: string) {
   const adminPassword = process.env.ADMIN_PASSWORD || 'morbihan2026'
 
   if (password === adminPassword) {
     const cookieStore = await cookies()
-    // Definir le cookie de session pour 1 jour
     cookieStore.set('admin_session', 'true', {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
+      sameSite: 'lax',
       maxAge: 60 * 60 * 24, // 24 heures
       path: '/',
     })
-    return { success: true }
+    redirect('/admin')
   }
 
   return { success: false, message: "Mot de passe incorrect." }
