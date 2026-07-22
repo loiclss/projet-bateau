@@ -28,12 +28,44 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Morbihan Nautic",
+    "description": "Plateforme locale de réservation et location de bateaux (voiliers, semi-rigides, bateaux à moteur) dans le Golfe du Morbihan.",
+    "url": "https://projet-bateaulevrai.pages.dev",
+    "telephone": "+33695275422",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vannes",
+      "addressRegion": "Morbihan",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 47.6559,
+      "longitude": -2.7603
+    },
+    "areaServed": "Golfe du Morbihan",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "120"
+    }
+  };
+
   return (
     <html
       lang="fr"
       className={`${inter.variable} ${outfit.variable} h-full antialiased dark`}
       style={{ colorScheme: "dark" }}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${inter.className} min-h-full flex flex-col bg-[var(--color-vasiere)] text-[var(--color-ecume)]`}
       >

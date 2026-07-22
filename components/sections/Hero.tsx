@@ -24,11 +24,11 @@ export default function Hero() {
         />
       </div>
 
-      {/* Overlay gradient pour la lisibilité sur fond vasière */}
+      {/* Overlay gradient pour la lisibilité sur fond marine */}
       <div
         className="absolute inset-0 z-[1]"
         style={{
-          background: 'linear-gradient(to bottom, rgba(58,74,66,0.3) 0%, rgba(42,52,47,0.85) 100%)',
+          background: 'linear-gradient(to bottom, rgba(27,58,75,0.4) 0%, rgba(27,58,75,0.92) 100%)',
         }}
       />
 
@@ -36,7 +36,7 @@ export default function Hero() {
       <div className="relative z-10 mx-auto max-w-5xl px-5 text-center mt-12">
         <div className="space-y-6">
           {/* Accroche contextuelle authentique */}
-          <span className="inline-block text-[0.75rem] font-medium tracking-[0.2em] text-[var(--color-ecume)] uppercase bg-[#2a342f]/60 border border-white/10 px-5 py-2 rounded-full backdrop-blur-md">
+          <span className="inline-block text-[0.75rem] font-medium tracking-[0.2em] text-[var(--color-ecume)] uppercase bg-[#1B3A4B]/80 border border-[var(--color-ecume)]/15 px-5 py-2 rounded-full backdrop-blur-md">
             Golfe du Morbihan · Bretagne Sud
           </span>
 
@@ -64,7 +64,7 @@ export default function Hero() {
             </button>
             <a
               href="tel:+33695275422"
-              className="flex items-center gap-2.5 rounded-full border border-[var(--color-granit)] bg-[#2a342f]/40 backdrop-blur-sm px-7 py-3.5 text-[0.95rem] font-medium text-[var(--color-ecume)] transition-all hover:bg-[var(--color-granit)]/30 hover:border-[var(--color-ecume)]/50"
+              className="flex items-center gap-2.5 rounded-full border border-[var(--color-granit)] bg-[#1B3A4B]/60 backdrop-blur-sm px-7 py-3.5 text-[0.95rem] font-medium text-[var(--color-ecume)] transition-all hover:bg-[var(--color-granit)]/30 hover:border-[var(--color-ecume)]/50"
             >
               <Phone className="h-4 w-4 text-[var(--color-ocre)]" />
               06 95 27 54 22
@@ -72,11 +72,11 @@ export default function Hero() {
           </div>
 
           {/* Proof points très spécifiques nautisme local */}
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 pt-8 text-[0.75rem] font-medium text-[var(--color-ecume)]/70 uppercase tracking-wide">
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 pt-8 text-[0.75rem] font-medium text-[var(--color-ecume)]/80 uppercase tracking-wide">
             <span className="flex items-center gap-2"><span className="text-[var(--color-ocre)]">✦</span> Briefing marnage & courants</span>
             <span className="flex items-center gap-2"><span className="text-[var(--color-ocre)]">✦</span> 42 îles à explorer</span>
             <span className="flex items-center gap-2"><span className="text-[var(--color-ocre)]">✦</span> Loueurs 100% locaux</span>
-            <span className="flex items-center gap-2"><span className="text-[var(--color-ocre)]">✦</span> Départ sur 4 ports</span>
+            <span className="flex items-center gap-2"><span className="text-[var(--color-ocre)]">✦</span> Départ sur 6 ports</span>
           </div>
         </div>
       </div>

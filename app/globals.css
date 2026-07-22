@@ -12,29 +12,28 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  /* Couleurs métier - Golfe du Morbihan */
-  --color-vasiere: #3a4a42; /* Fond sombre profond (Gris-vert) */
-  --color-granit: #595A55; /* Textes secondaires et bordures */
-  --color-ocre: #B55333; /* Voile tannée - Accents chaleureux */
-  --color-ecume: #F0F3F2; /* Blanc cassé pour textes clairs */
-  --color-cuivre: #C47547; /* Boutons et CTAs */
+  /* Couleurs métier - Morbihan Nautic (Ancrées & Sophistiquées) */
+  --color-vasiere: #1B3A4B; /* Bleu Marine Profond */
+  --color-granit: #4A6572; /* Bleu-Gris Ardoise */
+  --color-ocre: #D4883A; /* Laiton / Cuivre Chaud */
+  --color-ecume: #E8ECEF; /* Écume Froide pour le texte et contrastes */
+  --color-cuivre: #C87D55; /* Cuivre bouton et CTA */
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: #B55333;
+  --background: #1B3A4B;
+  --foreground: #E8ECEF;
+  --border: rgba(232, 236, 239, 0.12);
+  --input: rgba(232, 236, 239, 0.12);
+  --ring: #D4883A;
 }
 
 .dark {
-  /* Le thème principal est le dark mode, ancré sur la couleur vasière */
-  --background: #2a342f; /* Vasière claire pour le fond */
-  --foreground: #F0F3F2; /* Écume */
-  --border: rgba(240, 243, 242, 0.1);
-  --input: rgba(240, 243, 242, 0.1);
-  --ring: #B55333; /* Ocre */
+  --background: #1B3A4B;
+  --foreground: #E8ECEF;
+  --border: rgba(232, 236, 239, 0.12);
+  --input: rgba(232, 236, 239, 0.12);
+  --ring: #D4883A;
 }
 
 @layer base {
