@@ -6,6 +6,8 @@ import FloatingActions from '@/components/ui/FloatingActions'
 import { BLOG_POSTS } from '@/lib/constants/blog-data'
 import { BookOpen, Calendar, Clock, ArrowRight, Anchor } from 'lucide-react'
 
+export const runtime = 'edge'
+
 export const metadata: Metadata = {
   title: "Blog & Guides Nautiques | Location Bateau Golfe du Morbihan",
   description: "Découvrez nos guides de navigation, conseils de pêche, itinéraires d'escales et règles de sécurité pour réussir votre location de bateau dans le Golfe du Morbihan.",

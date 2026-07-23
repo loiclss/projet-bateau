@@ -5,6 +5,8 @@ import Footer from '@/components/layout/Footer'
 import FloatingActions from '@/components/ui/FloatingActions'
 import { Anchor, Compass, Sun, Fish, MapPin, ArrowRight, ShieldAlert, Waves } from 'lucide-react'
 
+export const runtime = 'edge'
+
 export const metadata: Metadata = {
   title: "Programmes de Navigation dans le Golfe du Morbihan | Morbihan Nautic",
   description: "Découvrez nos itinéraires de navigation conseillés dans le Golfe du Morbihan : traversée vers Houat, tour des îles, courant de la Jument et spots de pêche.",
